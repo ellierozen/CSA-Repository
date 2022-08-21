@@ -13,7 +13,7 @@ Setting it up was pretty easy as I started following instructions. I followed th
 
 - Set up git to complete the first PR
 - Modified my post page
-- Something else
+- Some change
 - Another change
 
 
