@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "My First Post",
-            "content": "Working with Fast Pages . Basic setup . Setting it up was pretty easy as I started following instructions. I followed these steps: . Set up git to complete the first PR | Modified my post page | Some change | Another change | .",
-            "url": "https://ellierozen.github.io/CSA-Repository/markdown/2022/08/21/My-First-Post.html",
-            "relUrl": "/markdown/2022/08/21/My-First-Post.html",
+            "title": "My First Post!",
+            "content": "My First Post . Hi, I’m Ellie and this is my first fastpages post of the CSA year! . A Fun Fact About Me . I have soft-coated Wheaten Terrior named Charlie :D .",
+            "url": "https://ellierozen.github.io/CSA-Repository/markdown/fastpages/2022/08/21/My-First-Post.html",
+            "relUrl": "/markdown/fastpages/2022/08/21/My-First-Post.html",
             "date": " • Aug 21, 2022"
         }
         
