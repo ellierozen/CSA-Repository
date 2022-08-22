@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "My First Post",
-            "content": "Working with Fast Pages . Basic setup . Setting it up was pretty easy as I started following instructions. I followed these steps: . Set up git to complete the first PR | Modified my post page | Some change | Another change | .",
-            "url": "https://ellierozen.github.io/CSA-Repository/markdown/2022/08/21/My-First-Post.html",
-            "relUrl": "/markdown/2022/08/21/My-First-Post.html",
+            "title": "Python Notebook",
+            "content": "msg = &quot;Hello&quot; print(msg) .",
+            "url": "https://ellierozen.github.io/CSA-Repository/2022/08/21/Python-Notebook.html",
+            "relUrl": "/2022/08/21/Python-Notebook.html",
             "date": " • Aug 21, 2022"
         }
         
@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": "msg = &quot;Hello&quot; print(msg) . Hello .",
-            "url": "https://ellierozen.github.io/CSA-Repository/2022/08/21/My-First-Notebook.html",
-            "relUrl": "/2022/08/21/My-First-Notebook.html",
+            "title": "My First Post",
+            "content": "Working with Fast Pages . Basic setup . Setting it up was pretty easy as I started following instructions. I followed these steps: . Set up git to complete the first PR | Modified my post page | Some change | Another change | .",
+            "url": "https://ellierozen.github.io/CSA-Repository/markdown/2022/08/21/My-First-Post.html",
+            "relUrl": "/markdown/2022/08/21/My-First-Post.html",
             "date": " • Aug 21, 2022"
         }
         
