@@ -1,21 +1,12 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
-categories: [markdown]
-title: My First Post
+description: Ellie's First Post!!!
+categories: [markdown, fastpages]
+title: My First Post!
 ---
-# Working with Fast Pages
+# My First Post
+Hi, I'm Ellie and this is my first fastpages post of the CSA year!
+## A Fun Fact About Me
 
-## Basic setup
-
-Setting it up was pretty easy as I started following instructions. I followed these steps:
-
-- Set up git to complete the first PR
-- Modified my post page
-- Some change
-- Another change
-
-
-
-[^1]: And this is my footnote.
+I have soft-coated Wheaten Terrior named Charlie :D
