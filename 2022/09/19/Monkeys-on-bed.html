@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Iteration with 2D Array | fastpages</title>
+<title>Iteration Lab | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Iteration with 2D Array" />
+<meta property="og:title" content="Iteration Lab" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-19T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Iteration with 2D Array" />
+<meta property="twitter:title" content="Iteration Lab" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-19T00:00:00-05:00","datePublished":"2022-09-19T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Iteration with 2D Array","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2022/09/19/Monkeys-on-bed.html"},"url":"https://ellierozen.github.io/CSA-Repository/2022/09/19/Monkeys-on-bed.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-19T00:00:00-05:00","datePublished":"2022-09-19T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Iteration Lab","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2022/09/19/Monkeys-on-bed.html"},"url":"https://ellierozen.github.io/CSA-Repository/2022/09/19/Monkeys-on-bed.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSA-Repository/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ellierozen.github.io/CSA-Repository/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSA-Repository/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Iteration with 2D Array</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-19T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Iteration Lab</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-19T00:00:00-05:00" itemprop="datePublished">
         Sep 19, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      7 min read
     
 </span></p>
 
@@ -295,9 +295,231 @@ No more monkeys jumping on the bed
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
+    <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
+                            <span class="c1">//2D array is like a grid [x][y]</span>
+                            <span class="c1">// or like a spreadsheet [row][column]</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor initializes a 2D array of Monkeys</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//Storing Data in 2D arrays</span>
+        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, &quot;new&quot; makes a container (&quot;object&quot;)</span>
+                <span class="c1">//Monkey 0</span>
+                <span class="p">{</span>
+                              <span class="s">&quot;  __&quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  / _,\ &quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  \_\ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;,,,,    _,_)  #      /)&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  (= =)D__/    __/  &quot;</span>   <span class="p">,</span>
+                 <span class="s">&quot;  C/^__)/     _(    ___//&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  \_,/  -.   &#39;-._/,--&#39;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot; _\\_,  /           -//.&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;\_ \_/  -,._ _     ) )&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;    \/    /    )    / /&quot;</span><span class="p">,</span>
+                  <span class="s">&quot; \-__,/    (    ( (&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;  \.__,-)\_&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;  )\_ / -(&quot;</span> <span class="p">,</span>
+                                  <span class="s">&quot; -(//// &quot;</span><span class="p">,</span>
+             
+                <span class="p">},</span>
+                <span class="c1">//Monkey 1</span>
+                <span class="p">{</span>
+                               <span class="s">&quot;  __&quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  / _,\ &quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  \_\ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;,,,,    _,_)  #      /)&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  (= =)D__/    __/  &quot;</span>   <span class="p">,</span>
+                 <span class="s">&quot;  C/^__)/     _(    ___//&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  \_,/  -.   &#39;-._/,--&#39;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot; _\\_,  /           -//.&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;\_ \_/  -,._ _     ) )&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;    \/    /    )    / /&quot;</span><span class="p">,</span>
+                  <span class="s">&quot; \-__,/    (    ( (&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;  \.__,-)\_&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;  )\_ / -(&quot;</span> <span class="p">,</span>
+                                  <span class="s">&quot; -(//// &quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="c1">//Monkey 2</span>
+                <span class="p">{</span>              <span class="s">&quot;  __&quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  / _,\ &quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  \_\ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;,,,,    _,_)  #      /)&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  (= =)D__/    __/  &quot;</span>   <span class="p">,</span>
+                 <span class="s">&quot;  C/^__)/     _(    ___//&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  \_,/  -.   &#39;-._/,--&#39;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot; _\\_,  /           -//.&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;\_ \_/  -,._ _     ) )&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;    \/    /    )    / /&quot;</span><span class="p">,</span>
+                  <span class="s">&quot; \-__,/    (    ( (&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;  \.__,-)\_&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;  )\_ / -(&quot;</span> <span class="p">,</span>
+                                  <span class="s">&quot; -(//// &quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="c1">//Monkey 3</span>
+                <span class="p">{</span>
+                               <span class="s">&quot;  __&quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  / _,\ &quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  \_\ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;,,,,    _,_)  #      /)&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  (= =)D__/    __/  &quot;</span>   <span class="p">,</span>
+                 <span class="s">&quot;  C/^__)/     _(    ___//&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  \_,/  -.   &#39;-._/,--&#39;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot; _\\_,  /           -//.&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;\_ \_/  -,._ _     ) )&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;    \/    /    )    / /&quot;</span><span class="p">,</span>
+                  <span class="s">&quot; \-__,/    (    ( (&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;  \.__,-)\_&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;  )\_ / -(&quot;</span> <span class="p">,</span>
+                                  <span class="s">&quot; -(//// &quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="c1">//Monkey 4</span>
+                <span class="p">{</span>
+                              <span class="s">&quot;  __&quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  / _,\ &quot;</span><span class="p">,</span>
+                             <span class="s">&quot;  \_\ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;,,,,    _,_)  #      /)&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  (= =)D__/    __/  &quot;</span>   <span class="p">,</span>
+                 <span class="s">&quot;  C/^__)/     _(    ___//&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;  \_,/  -.   &#39;-._/,--&#39;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot; _\\_,  /           -//.&quot;</span><span class="p">,</span>
+                  <span class="s">&quot;\_ \_/  -,._ _     ) )&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;    \/    /    )    / /&quot;</span><span class="p">,</span>
+                  <span class="s">&quot; \-__,/    (    ( (&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;  \.__,-)\_&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;  )\_ / -(&quot;</span> <span class="p">,</span>
+                                  <span class="s">&quot; -(//// &quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Loop and print monkeys in array</span>
+<span class="cm">     * ... repeat until you reach zero  ...</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//begin the poem</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monkey Jumpers Poem in Java Loopy&quot;</span><span class="p">);</span>
+
+        <span class="c1">// monkeys (non-primitive) defined in constructor knows its length</span>
+        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
+        <span class="p">{</span>
+
+            <span class="c1">//this print statement shows current count of Monkeys</span>
+            <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">&quot; little monkeys jumping on the bed...&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 fell off and bumped his head&quot;</span><span class="p">);</span>
+
+            <span class="c1">//how many separate parts are there in a monkey monkey?</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through &quot;cells&quot; of 2d array</span>
+
+                <span class="cm">/*cycles through columns to print</span>
+<span class="cm">                each monkey part by part, will eventually print entire column*/</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span><span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+                    <span class="c1">// prints specific part of the monkey from the column</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+
+                   
+                <span class="p">}</span>
+
+                <span class="c1">//this new line gives separation between stanza of poem</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="c1">//countdown for poem, decrementing monkeyCount variable by 1</span>
+            <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//out of all the loops, prints finishing messages</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No more monkeys jumping on the bed&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0000000000000000000000000000000000&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;             THE END              &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">//a new monkey list and output in one step</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                             &#34;  / _,\</span><span class="ansi-black-intense-fg ansi-bold"> &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                             &#34;  \</span><span class="ansi-black-intense-fg ansi-bold">_\ &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                             &#34;  \_\</span><span class="ansi-black-intense-fg ansi-bold"> &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                  &#34;  \</span><span class="ansi-black-intense-fg ansi-bold">_,/  -.   &#39;-._/,--&#39;&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                  &#34;\</span><span class="ansi-black-intense-fg ansi-bold">_ \_/  -,._ _     ) )&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                  &#34;\_ \</span><span class="ansi-black-intense-fg ansi-bold">_/  -,._ _     ) )&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                 &#34;    \</span><span class="ansi-black-intense-fg ansi-bold">/    /    )    / /&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                  &#34; \</span><span class="ansi-black-intense-fg ansi-bold">-__,/    (    ( (&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                            &#34;  \</span><span class="ansi-black-intense-fg ansi-bold">.__,-)\_&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                            &#34;  \.__,-)\</span><span class="ansi-black-intense-fg ansi-bold">_&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                               &#34;  )\</span><span class="ansi-black-intense-fg ansi-bold">_ / -(&#34; ,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Is-this-porgram-in-more-of-an-imperative-programming-style-or-OOP-style?"> Is this porgram in more of an imperative programming style or OOP style?<a class="anchor-link" href="#-Is-this-porgram-in-more-of-an-imperative-programming-style-or-OOP-style?"> </a></h2>
+<ul>
+<li>Is this porgram in more of an imperative programming style or OOP style? This program is Imperative style of programming because it uses loops and arrays to run rather than soley objects</li>
+<li>Is each monkey an object? No, each monkey is made up of text. </li>
+</ul>
+
 </div>
 </div>
 </div>
