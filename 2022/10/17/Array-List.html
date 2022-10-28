@@ -132,32 +132,81 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
-
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">WishList</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">arg</span><span class="o">[]</span><span class="p">){</span>
-        <span class="c1">// create a ArrayList String type</span>
-        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">wishlist</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-        <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 
-        <span class="k">do</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current list is &quot;</span> <span class="o">+</span> <span class="n">wishlist</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Add more? (y/n)&quot;</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter : &quot;</span><span class="p">);</span>
-                <span class="n">Scanner</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-                <span class="n">wishlist</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;List is &quot;</span> <span class="o">+</span> <span class="n">wishlist</span><span class="p">);</span>
-        <span class="n">String</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">wishlist</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Array is &quot;</span> <span class="o">+</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
-
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">lists</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">lists</span><span class="p">(</span><span class="n">String</span> <span class="n">arg</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// create a ArrayList String type</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">clothesWishlist</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">jewelryWishlist</span><span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Earrings&quot;</span><span class="p">,</span> <span class="s">&quot;Necklace&quot;</span><span class="p">,</span> <span class="s">&quot;Ring&quot;</span><span class="p">,</span> <span class="s">&quot;Bracelet&quot;</span><span class="p">));</span>
+
+        <span class="c1">//adding items to list </span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;boots&quot;</span><span class="p">);</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;dress&quot;</span><span class="p">);</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;shirt&quot;</span><span class="p">);</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;skirt&quot;</span><span class="p">);</span>
+        <span class="c1">//printing wishlist </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="o">+</span> <span class="n">clothesWishlist</span> <span class="o">+</span> <span class="s">&quot; : &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; amount of wants&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//checking if list is empty</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;List doesn&#39;t have items? &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//adding jewlery to clothing list </span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">jewelryWishlist</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//Removing an element </span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;boots&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="o">+</span> <span class="n">clothesWishlist</span> <span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//get index</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dont want your first item?: &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//set index</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;jacket&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Your new wishlist: &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//remove index</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;lets get rid of the second item!&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//indexOf</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Where is skirt on the list now?&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Skirt index is: &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;skirt&quot;</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//lastIndexOf returns -1 because pants were never added </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Where is pants last seen on my wishlist? &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">&quot;pants&quot;</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">// compares jewelry wishlist and clothing wishlist</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;are my two wishlists the same? &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">jewelryWishlist</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//hashcode </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">clothesWishlist</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//check if list contains </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Are sparkly shoes on my wishlist? &quot;</span> <span class="o">+</span><span class="n">clothesWishlist</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;sparkly shoes&quot;</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//sort by alphabetical order</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">naturalOrder</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">clothesWishlist</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;===========&quot;</span><span class="p">);</span>
+        <span class="c1">//clearing the list</span>
+        <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">clothesWishlist</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+
+
+        
+    <span class="p">}</span>
+
+     
+
+        
 <span class="p">}</span>
 
 <span class="n">WishList</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -173,19 +222,35 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Current list is []
-Add more? (y/n)
-Enter : 
-Current list is [boots]
-Add more? (y/n)
-Enter : 
-Current list is [boots, jacket]
-Add more? (y/n)
-Enter : 
-Current list is [boots, jacket, dog]
-Add more? (y/n)
-List is [boots, jacket, dog]
-Array is [boots, jacket, dog]
+<pre>[boots, dress, shirt, skirt] : 4 amount of wants
+===========
+List doesn&#39;t have items? false
+===========
+[boots, dress, shirt, skirt, Earrings, Necklace, Ring, Bracelet]
+===========
+[dress, shirt, skirt, Earrings, Necklace, Ring, Bracelet]
+===========
+Dont want your first item?: dress
+===========
+Your new wishlist: [jacket, shirt, skirt, Earrings, Necklace, Ring, Bracelet]
+===========
+lets get rid of the second item!
+[jacket, skirt, Earrings, Necklace, Ring, Bracelet]
+===========
+Where is skirt on the list now?
+Skirt index is: 1
+===========
+Where is pants last seen on my wishlist? -1
+===========
+are my two wishlists the same? false
+===========
+-1154896441
+===========
+Are sparkly shoes on my wishlist? false
+===========
+[Bracelet, Earrings, Necklace, Ring, jacket, skirt]
+===========
+ 0
 </pre>
 </div>
 </div>
