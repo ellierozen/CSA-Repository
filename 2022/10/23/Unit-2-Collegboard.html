@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -150,6 +150,174 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="New-vocab">New vocab<a class="anchor-link" href="#New-vocab"> </a></h2><p>Wrapper Classes</p>
+<ul>
+<li>A wrapper class in Java is a class that contains or “wraps” primitive data types as an object</li>
+<li>Wrapper classes provide static methods that allow you to perform some basic number operations, such as converting data from a string to a number</li>
+<li>Creating wrapper objects, such as Integer and Double objects can be done in a similar way to other objects. The constructor takes a single value and converts it into the object version of that value</li>
+<li>Importance: <ul>
+<li>Allows null values</li>
+<li>Can be used in collection such as List, Map, etc.</li>
+<li>Can be used in methods which accepts arguments of Object type.</li>
+<li>Can be created like Objects using new ClassName() like other objects:</li>
+<li>Makes available all the functions that Object class has such as clone(), equals(), hashCode(), toString() etc.
+Example:
+Integer y = new Integer(17);
+Double z = new Double(3.14);</li>
+</ul>
+</li>
+</ul>
+<p>Concatenation</p>
+<ul>
+<li>mainly used to add two strings together 
+Ex: 
+System.out.println(Ellie + "went to the park with" + Charlie)
+rules: The concatenation character is mandatory when:</li>
+<li>An alphanumeric character follows a variable symbol.</li>
+<li>A left parenthesis that does not enclose a subscript follows a variable symbol.</li>
+<li>A period (.) is to be generated. Two periods must be specified in the concatenated string following a variable symbol.</li>
+<li>The concatenation character is not required when:</li>
+<li>An ordinary character string precedes a variable symbol.</li>
+<li>A special character, except a left parenthesis or a period, is to follow a variable symbol.</li>
+<li>A variable symbol follows another variable symbol.</li>
+<li>A variable symbol is used with a subscript. The concatenation character must not be used between a variable symbol and its subscript; otherwise, the characters are considered a concatenated string and not a subscripted variable symbol.</li>
+</ul>
+<p>Math Class</p>
+<ul>
+<li>The Math class is a class that only contains static methods that are used for specific purposes</li>
+<li>since the math class contains only static methods, you do not need to instantiate an object to use it. Static methods are called using the dot operator along with the class name.
+Ex:  int x = Math.abs(-5); takes absolute value of negative 5</li>
+<li>The random method takes no input and returns a random number from zero to one, inclusive of zero, but not inclusive of one.
+Ex: 
+double ranNum = Math.random() * 10; this takes a random value from 0 to 10</li>
+<li>You must include the multiplier inside parentheses along with the random call. If you do not, you will end up casting only the Math.random() part, and since it is always less than one, your random function will always result in zero. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wrapper-class-tangibles">Wrapper class tangibles<a class="anchor-link" href="#Wrapper-class-tangibles"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">222</span><span class="p">;</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Integer</span> <span class="n">X</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[222, 222]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenation-tangibles">Concatenation tangibles<a class="anchor-link" href="#Concatenation-tangibles"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Ellie&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot; has a dog&quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ellie has a dog
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Math-class-tangible">Math class tangible<a class="anchor-link" href="#Math-class-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">ranNum</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">25</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ranNum</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>50
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="2006-FRQ">2006 FRQ<a class="anchor-link" href="#2006-FRQ"> </a></h1>

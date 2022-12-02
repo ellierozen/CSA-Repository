@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -141,6 +141,243 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="New-Vocab">New Vocab<a class="anchor-link" href="#New-Vocab"> </a></h2><p>For loop</p>
+<ul>
+<li>for loops allow us to repeat code a fixed number of times
+Ex:
+for (int i = 0; i &lt; COUNT; i++) 
+{
+  blah 
+}</li>
+<li>The first part initializes the loop variable, the second part tests some condition and the third part increments or decrements the loop variable. Each part of the for loop is separated by a semicolon (;)</li>
+</ul>
+<p>Enhanced for loop</p>
+<ul>
+<li>The enhanced for loop repeatedly executes a block of statements by iterating over a array or collection elements.
+Ex:
+ for (T item : elements_of_type_T) 
+<pre><code>  {
+      //custom code
+  }</code></pre>
+</li>
+</ul>
+<p>While loop vs Do while 
+<em>While</em></p>
+<ul>
+<li>As long as the boolean expression remains true, code within the while loop will be executed</li>
+<li>The moment that the boolean expression becomes false, code outside of the while loop will be executed; the loop is done.</li>
+<li>You must exercise caution when using while loops to avoid the dreaded infinite loop
+Ex:
+while(boolean expression)
+{
+ // code block inside of while loop to execute if the boolean expression is true
+}
+<em>Do while</em></li>
+<li>do-while loop executes all of the phrases inside the loop precisely once before assessing the loop’s requirement, and it runs at least once irrespective of whether the situation is fulfilled</li>
+<li>do at start and while condition at end </li>
+</ul>
+<p>Nested Loops</p>
+<ul>
+<li>A nested iteration statement is an iteration statement that appears in the body of another iteration statement.
+Ex:
+for (int row = 1; row &lt; 6; row++) {
+  // Original loop inside
+  for(int count = 1; count &lt; 6; count++) {
+<pre><code>  System.out.print(count * row + " " );
+</code></pre>
+  }</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="for-loop-tangible">for loop tangible<a class="anchor-link" href="#for-loop-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="while-loop-tangible">while loop tangible<a class="anchor-link" href="#while-loop-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Initiating countdown:&quot;</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">&quot;...&quot;</span><span class="p">);</span>
+  <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Initiating countdown:
+5...
+4...
+3...
+2...
+1...
+0...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="do-while-loop-tangible">do while loop tangible<a class="anchor-link" href="#do-while-loop-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x is 1&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">bool</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x is 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="nested-loop-tangible">nested loop tangible<a class="anchor-link" href="#nested-loop-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Original loop inside</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">count</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">count</span> <span class="o">*</span> <span class="n">row</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3 4 5 
+2 4 6 8 10 
+3 6 9 12 15 
+4 8 12 16 20 
+5 10 15 20 25 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -171,7 +408,7 @@ window.onload = wrap_img;
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="c1">//convert to for loop</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">//while loop example</span>
         <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;count is &quot;</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
             <span class="n">count</span><span class="o">++</span><span class="p">;</span>

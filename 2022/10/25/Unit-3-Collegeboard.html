@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -142,6 +142,213 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="New-Vocab">New Vocab<a class="anchor-link" href="#New-Vocab"> </a></h2><p>Compound Boolean Expression</p>
+<ul>
+<li>Logical operators allow you to combine and connect booleans in useful ways.<ul>
+<li>not, or, and </li>
+</ul>
+</li>
+<li>! operator takes precedence over &amp;&amp;, and &amp;&amp; takes precedence over ||
+Ex:
+a &amp;&amp; b || b</li>
+</ul>
+<p>Truth Tables 
+<em>Or operator</em>
+true    true    true
+true    false   true
+false   true    true
+false   false   false
+<em>And operator</em>
+true    true    true
+true    false   false
+false   true    false
+false   false   false
+<em>Not operator</em>
+true    false
+false   true</p>
+<p>DeMorgans Law</p>
+<ul>
+<li>easy reminder-- De Morgan’s Laws: move the NOT inside, AND becomes OR and move the NOT inside, OR becomes AND
+Ex:
+!(c == d) is equivalent to (c != d)</li>
+</ul>
+<p>!(c != d) is equivalent to (c == d)</p>
+<p>!(c &lt; d) is equivalent to (c &gt;= d)</p>
+<p>!(c &gt; d) is equivalent to (c &lt;= d)</p>
+<p>!(c &lt;= d) is equivalent to (c &gt; d)</p>
+<p>!(c &gt;= d) is equivalent to (c &lt; d)</p>
+<p>Comparing Strings, Objets, Numbers</p>
+<ul>
+<li>comparing the objects with == returns true</li>
+<li>You can also do this comparison with != to check if two objects are not aliases</li>
+<li>.equals(). This method is called from a variable and it passes a parameter to compare to in order to determine if the values are equal
+<em>strings</em> Ex: 
+<pre><code>     if(favoritMovie.equals("Gentlemen"))
+ {
+     System.out.println("Good Choice");
+ }
+ else 
+ {
+     System.out.println("Are you sure that's your favorite movie?");
+ }
+</code></pre>
+<em>objets</em> Ex: 
+Rectangle one = new Rectangle(3,7);
+Rectangle two = one;</li>
+</ul>
+<p>boolean same = one == two; // Will be true
+<em>numbers</em> Ex:
+  if(one.equals(two))
+        {
+            System.out.println(one + " is equal to " + two);
+        }</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="compound-boolean-tangible">compound boolean tangible<a class="anchor-link" href="#compound-boolean-tangible"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">90</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">sunny</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">70</span> <span class="o">&amp;&amp;</span> <span class="n">sunny</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Time to get outside!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Time to get outside!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Demorgans-law-tangible">Demorgans law tangible<a class="anchor-link" href="#Demorgans-law-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;True code block&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;True code block&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;True or False code block&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">a</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true or false&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;False code block&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True code block
+True code block
+True or False code block
+true or false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="comparing">comparing<a class="anchor-link" href="#comparing"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span><span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2>

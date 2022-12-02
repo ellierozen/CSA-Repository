@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -147,6 +147,180 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="New-Vocab">New Vocab<a class="anchor-link" href="#New-Vocab"> </a></h2><p>Writing Classes</p>
+<ul>
+<li>In Java, there are two main access levels that you will see in this course, private and public</li>
+<li>When creating classes, classes should always be declared public since they need to be accessed by other classes</li>
+</ul>
+<p>Ex:
+public class car 
+{
+    blah
+}</p>
+<p>Constructor</p>
+<ul>
+<li>You use constructors to create new objects using a class</li>
+<li>Constructors are used to set the initial state of an object, which should include initial values for all instance variables</li>
+<li>The no-argument constructor executes anytime an object is created and sets any instant variable to their default value</li>
+<li>The reason the constructor doesn't return a value is because it's not called directly by your code, it's called by the memory allocation and object initialization code in the runtime.
+Ex:
+private int height; </li>
+</ul>
+<p>Accessor Methods</p>
+<ul>
+<li>An accessor method is a method that is used to return the value of an instance (or static) variable to the user</li>
+<li>When naming your method you should always use this format: get[Variable Name] for the name- 
+Getter method Ex:</li>
+</ul>
+<p>private int height = 3;</p>
+<p>public int getHeight()
+{
+  return height;
+}</p>
+<p>Mutator Methods</p>
+<ul>
+<li>A mutator method is a method that is used to update the value of an instance (or static) variable</li>
+<li>Mutator methods set a new value. As such, they are often referred to as setter methods</li>
+<li>When creating mutator methods you should always use: set[Variable Name]
+Ex:
+private int width = 10;</li>
+</ul>
+<p>public void setWidth(int newWidth)
+{
+  width = newWidth;
+}</p>
+<p>Static Methods/Class Methods</p>
+<ul>
+<li>A class method (or static method) is a method of a class that is common to all instances of a class and is not called on any specific object instance</li>
+<li>Classes can have both instance variables and static variables, but static methods can only update static variables
+Ex:
+private static int getTotalBirds()
+{
+return totalBirds;
+}</li>
+</ul>
+<p>Static Variables</p>
+<ul>
+<li>Because static methods and variables are available across an entire class, they don’t need to be called on a particular instance of the class. 
+Ex:
+Skater.getTotalSkaters(); //This will call the getTotalSkaters() method on the Skater class without requiring an instance of the class to be created.</li>
+</ul>
+<p>This</p>
+<ul>
+<li>"this": refers to constructor being called in , references the object </li>
+</ul>
+<p>Access modifiers</p>
+<ul>
+<li>mainly used for encapsulation and helps to prevent misuse of data public static void main string args</li>
+<li>public, protected, default, private 
+Ex:
+private static void 
+protected void </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="accessor-tangible">accessor tangible<a class="anchor-link" href="#accessor-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getWidth</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">width</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="mutator-tangible">mutator tangible<a class="anchor-link" href="#mutator-tangible"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHeight</span><span class="p">(</span><span class="kt">int</span> <span class="n">newHeight</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">height</span> <span class="o">=</span> <span class="n">newHeight</span><span class="p">;</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="static-variables-and-methods-tangibles">static variables and methods tangibles<a class="anchor-link" href="#static-variables-and-methods-tangibles"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">SuperHeroTester</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Power</span> <span class="n">speed</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Power</span><span class="p">(</span><span class="s">&quot;Speed&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creating the Flash!&quot;</span><span class="p">);</span>
+    
+        <span class="n">SuperHero</span> <span class="n">theFlash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SuperHero</span><span class="p">(</span><span class="s">&quot;The Flash&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number of SuperHeroes Created:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">SuperHero</span><span class="p">.</span><span class="na">getNumSuperHeroes</span><span class="p">());</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creating Shazam!&quot;</span><span class="p">);</span>
+        <span class="n">SuperHero</span> <span class="n">shazam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SuperHero</span><span class="p">(</span><span class="s">&quot;Shazam&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number of SuperHeroes Created:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">SuperHero</span><span class="p">.</span><span class="na">numSuperHeroes</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2021-FRQ-1a">2021 FRQ 1a<a class="anchor-link" href="#2021-FRQ-1a"> </a></h2>
