@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://ellierozen.github.io/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html" />
-<meta property="og:url" content="https://ellierozen.github.io/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html" />
+<link rel="canonical" href="https://ellierozen.github.io/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html" />
+<meta property="og:url" content="https://ellierozen.github.io/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-12-01T00:00:00-06:00" />
+<meta property="article:published_time" content="2022-12-04T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 7 Array Lists Collegeboard" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-01T00:00:00-06:00","datePublished":"2022-12-01T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Unit 7 Array Lists Collegeboard","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html"},"url":"https://ellierozen.github.io/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-04T00:00:00-06:00","datePublished":"2022-12-04T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Unit 7 Array Lists Collegeboard","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html"},"url":"https://ellierozen.github.io/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSA-Repository/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ellierozen.github.io/CSA-Repository/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSA-Repository/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Unit 7 Array Lists Collegeboard</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-01T00:00:00-06:00" itemprop="datePublished">
-        Dec 1, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Unit 7 Array Lists Collegeboard</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-04T00:00:00-06:00" itemprop="datePublished">
+        Dec 4, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -154,11 +154,104 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//descending order and swapping first and last </span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="c1">// Initializing an ArrayList filled with integers</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">integers</span><span class="p">);</span>
+<span class="n">Collections</span><span class="p">.</span><span class="na">reverse</span><span class="p">(</span><span class="n">integers</span><span class="p">);</span>
+
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reverse order: &quot;</span> <span class="o">+</span> <span class="n">integers</span><span class="p">);</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(){</span>
+    <span class="n">Integer</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">last_index</span> <span class="o">=</span> <span class="n">integers</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> 
+    <span class="n">integers</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">integers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">last_index</span><span class="p">));</span>
+    <span class="n">integers</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">last_index</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;swapped the first and last numbers &quot;</span> <span class="o">+</span> <span class="n">integers</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">swap</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Reverse order: [92, 84, 64, 37, 1]
+swapped the first and last numbers [1, 84, 64, 37, 92]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//hashcode </span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="c1">// Initializing an ArrayList filled with integers</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">integers</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hash code: &quot;</span> <span class="o">+</span> <span class="n">integers</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hash code: 30719139
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
 
-  </div><a class="u-url" href="/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html" hidden></a>
+  </div><a class="u-url" href="/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html" hidden></a>
 </article>
 
       </div>

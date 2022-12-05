@@ -3,10 +3,10 @@
     
         "post0": {
             "title": "Unit 7 Array Lists Collegeboard",
-            "content": "a reference type mutatble and contains | . | For loops | While loops | Enhanced for loops for each loops | . | using arrary lists with doubles | Searching the locating of data w/ linear structures | ie: arrays, lists, que, stack | involves control structures | . | Sorting ascending and descending order | . | .",
-            "url": "https://ellierozen.github.io/CSA-Repository/2022/12/01/Unit-7-Collegeboard.html",
-            "relUrl": "/2022/12/01/Unit-7-Collegeboard.html",
-            "date": " • Dec 1, 2022"
+            "content": "a reference type mutatble and contains | . | For loops | While loops | Enhanced for loops for each loops | . | using arrary lists with doubles | Searching the locating of data w/ linear structures | ie: arrays, lists, que, stack | involves control structures | . | Sorting ascending and descending order | . | . //descending order and swapping first and last import java.util.ArrayList; import java.util.Collections; // Initializing an ArrayList filled with integers ArrayList&lt;Integer&gt; integers = new ArrayList&lt;&gt;(Arrays.asList(37,64,92,84,1)); Collections.sort(integers); Collections.reverse(integers); System.out.println(&quot;Reverse order: &quot; + integers); public static void swap(){ Integer temp = numbers.get(0); int last_index = integers.size()-1; integers.set(0, integers.get(last_index)); integers.set(last_index, temp); System.out.println(&quot;swapped the first and last numbers &quot; + integers); } swap() . Reverse order: [92, 84, 64, 37, 1] swapped the first and last numbers [1, 84, 64, 37, 92] . //hashcode import java.util.ArrayList; import java.util.Collections; // Initializing an ArrayList filled with integers ArrayList&lt;Integer&gt; integers = new ArrayList&lt;&gt;(Arrays.asList(37,64,92,84,1)); Collections.sort(integers); System.out.println(&quot;hash code: &quot; + integers.hashCode()); . hash code: 30719139 .",
+            "url": "https://ellierozen.github.io/CSA-Repository/2022/12/04/Unit-7-Collegeboard.html",
+            "relUrl": "/2022/12/04/Unit-7-Collegeboard.html",
+            "date": " • Dec 4, 2022"
         }
         
     
