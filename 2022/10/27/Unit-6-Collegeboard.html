@@ -130,13 +130,21 @@ window.onload = wrap_img;
 <p><em>arrays</em> 
 -array: type of data structure 
 -array and arrayLists are different 
--ex of declaration: int [] array = new int [10]; 
--common errors:</p>
+-ex of declaration: int [] array = new int [10];</p>
+
+<pre><code>- other ways:
+- final int length = 10, int[] numbers = new int 
+- int length = in.nextInt();, double[] data = new double[length]
+- int[squares]= {0,1,2,3,4}
+
+</code></pre>
+<p>-common errors:</p>
 <ul>
 <li>bound error: trying to access a variable that doesnt exist
 -uninitialized and unfiled arrays 
 -traverse an array: use any sort of loop but for loops are easiest to access </li>
 <li>int i=0; i&lt;array.length; i++</li>
+<li>enhanced for loops -- can use basic for loop to visit all elements in an array </li>
 </ul>
 
 </div>
@@ -149,30 +157,97 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayMethods</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Array</span>
 <span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="o">[]</span> <span class="n">values</span><span class="p">;</span> 
-    <span class="kd">public</span> <span class="nf">ArrayMethods</span> <span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">initialValues</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">values</span> <span class="o">=</span> <span class="n">initalValues</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="o">[]</span> <span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printValues</span><span class="p">(){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">swapFirstAndLast</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swapFirstAndLast</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
-        <span class="kt">double</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-        <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> 
+        <span class="kt">int</span> <span class="n">lastElement</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">values</span><span class="o">[</span><span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">values</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">lastElement</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">allZero</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">allZero</span><span class="p">()</span>
     <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
         
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isSorted</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+       
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> 
+            <span class="p">}</span>
+        <span class="p">}</span>
+    
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span> 
+    <span class="p">}</span>
+    
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Swapping elements:&quot;</span><span class="p">);</span>
+        <span class="n">Array</span> <span class="n">swapFirstAndLast</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Array</span><span class="p">();</span>
+        <span class="n">swapFirstAndLast</span><span class="p">.</span><span class="na">swapFirstAndLast</span><span class="p">();</span>
+        <span class="n">swapFirstAndLast</span><span class="p">.</span><span class="na">printValues</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Replacing elements with zero:&quot;</span><span class="p">);</span>
+        <span class="n">Array</span> <span class="n">allZero</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Array</span><span class="p">();</span>
+        <span class="n">allZero</span><span class="p">.</span><span class="na">allZero</span><span class="p">();</span>
+        <span class="n">allZero</span><span class="p">.</span><span class="na">printValues</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;are the orginal values sorted in increasing order?&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">isSorted</span><span class="p">(</span><span class="n">values</span><span class="p">));</span>
+
+
+    <span class="p">}</span>
+
+  
+
 <span class="p">}</span>
+
+<span class="n">Array</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Swapping elements:
+0
+0
+0
+0
+0
+Replacing elements with zero:
+0
+0
+0
+0
+0
+are the orginal values sorted in increasing order?
+true
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
