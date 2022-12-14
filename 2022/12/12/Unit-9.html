@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -153,13 +153,21 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">WorldCup</span><span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">players</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">wins</span><span class="p">;</span> 
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">wins</span><span class="p">;</span> 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">players</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">;</span> 
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span> <span class="s">&quot;{ \&quot;wins\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">wins</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;losses\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">losses</span><span class="o">+</span> <span class="s">&quot;\&quot;total players\&quot;: &quot;</span>  <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">players</span> <span class="o">+</span><span class="s">&quot; }&quot;</span> <span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">WorldCup</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">=</span> <span class="n">wins</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">=</span> <span class="n">losses</span><span class="p">;</span> 
+        <span class="k">this</span><span class="p">.</span><span class="na">players</span> <span class="o">=</span> <span class="n">players</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goals</span> <span class="o">=</span> <span class="n">goals</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Wins: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">+</span> <span class="s">&quot;, Losses: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">+</span> <span class="s">&quot;, Players: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">players</span> <span class="o">+</span> <span class="s">&quot;, Goals:&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">goals</span><span class="p">);</span>
     <span class="p">}</span>
  
 
@@ -167,14 +175,65 @@ window.onload = wrap_img;
     
 
 
-<span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">france</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">){</span>
-        <span class="n">France</span> <span class="n">stats</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">31</span><span class="p">);</span>
-    <span class="p">}</span> 
-
-   
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">France</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">goals</span><span class="p">);</span>
+    <span class="p">}</span>  
 
 <span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Croatia</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Croatia</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">goals</span><span class="p">);</span>
+    <span class="p">}</span>  
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Morocco</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Morocco</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">goals</span><span class="p">);</span>
+    <span class="p">}</span>  
+
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Brazil</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Brazil</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">goals</span><span class="p">);</span>
+    <span class="p">}</span>  
+
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Argentina</span> <span class="kd">extends</span> <span class="n">WorldCup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Argentina</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">players</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goals</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">goals</span><span class="p">);</span>
+    <span class="p">}</span>  
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Output</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">France</span> <span class="n">france</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;France &quot;</span> <span class="o">+</span> <span class="n">france</span><span class="p">);</span>
+
+        <span class="n">Croatia</span> <span class="n">croatia</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Croatia</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Croatia &quot;</span> <span class="o">+</span> <span class="n">croatia</span><span class="p">);</span>
+
+        <span class="n">Morocco</span> <span class="n">morocco</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Morocco</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Morocco &quot;</span> <span class="o">+</span> <span class="n">morocco</span><span class="p">);</span>
+
+        <span class="n">Brazil</span> <span class="n">brazil</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Brazil</span><span class="p">(</span><span class="mi">108</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Brazil &quot;</span> <span class="o">+</span> <span class="n">brazil</span><span class="p">);</span>
+
+        <span class="n">Argentina</span> <span class="n">argentina</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Argentina</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">26</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Argentina &quot;</span> <span class="o">+</span> <span class="n">argentina</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="n">Output</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -186,10 +245,146 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public String franceToString</span><span class="ansi-black-intense-fg ansi-bold">{</span>
-<span class="ansi-red-intense-fg ansi-bold">&#39;;&#39; expected</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>France Wins: 31, Losses: 22, Players: 12, Goals:9
+Croatia Wins: 24, Losses: 18, Players: 19, Goals:8
+Morocco Wins: 23, Losses: 78, Players: 32, Goals:2
+Brazil Wins: 108, Losses: 3, Players: 21, Goals:90
+Argentina Wins: 72, Losses: 14, Players: 34, Goals:26
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.time.LocalDate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.time.Period</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.time.ZoneId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span> 
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">){</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">(){</span>
+
+      <span class="n">LocalDate</span> <span class="n">date</span> <span class="o">=</span> <span class="n">LocalDate</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">birthday</span><span class="p">);</span>
+      <span class="k">return</span> <span class="n">Period</span><span class="p">.</span><span class="na">between</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">()).</span><span class="na">getYears</span><span class="p">();</span> 
+        
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBirthday</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span>  <span class="o">+</span> <span class="s">&quot;, Birthday: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getBirthday</span><span class="p">()</span>  <span class="o">+</span> <span class="s">&quot;, Age: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+ 
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numOfClasses</span><span class="p">;</span> 
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numOfClasses</span><span class="p">)</span> <span class="p">{</span>
+     <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
+     <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+     <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+     <span class="k">this</span><span class="p">.</span><span class="na">numOfClasses</span> <span class="o">=</span> <span class="n">numOfClasses</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
+     <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getGPA</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">gpa</span><span class="p">;</span>
+     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumOfClasses</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">numOfClasses</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+
+      <span class="k">return</span> <span class="p">(</span> <span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, Birthday: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getBirthday</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, Age: &quot;</span> <span class="o">+</span>  <span class="k">this</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span>  <span class="o">+</span>  <span class="s">&quot;, Grade: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getGrade</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, GPA: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getGPA</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, Number of classes: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNumOfClasses</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span> 
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span> 
+
+    <span class="kd">public</span> <span class="nf">Teacher</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">subject</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subject</span><span class="p">;</span>
+    
+    <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubject</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">subject</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="s">&quot; Age: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, subject: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getSubject</span><span class="p">());</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Homework</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Student</span> <span class="n">joe</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">&quot;joe&quot;</span><span class="p">,</span> <span class="s">&quot;2003-10-11&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">joe</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+        <span class="n">Teacher</span> <span class="n">marge</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">&quot;marge&quot;</span><span class="p">,</span> <span class="s">&quot;1968-02-12&quot;</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="s">&quot;math&quot;</span> <span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">marge</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Homework</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name: joe, Birthday: 2003-10-11, Age: 19, Grade: 11, GPA: 4.0, Number of classes: 12
+Name: marge, Age: 54, subject: math
 </pre>
 </div>
 </div>
