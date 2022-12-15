@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -146,6 +146,59 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Vocab">Vocab<a class="anchor-link" href="#Vocab"> </a></h3><ul>
+<li>Constructors - initialize the attributes for an object</li>
+<li><ul>
+<li>is a tool used to describe the time complexity of algorithms. It calculates the time taken to run an algorithm as the input grows. In other words, it calculates the worst-case time complexity of an algorithm. Big O Notation in Data Structure describes the upper bound of an algorithm’s runtime.</li>
+</ul>
+</li>
+<li>polymorphism is the capability of a method to do different things depending on the object it is acting upon. </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">VehicleTester</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Create 3 Vehicle objects</span>
+        <span class="n">Vehicle</span> <span class="n">tesla</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">(</span><span class="s">&quot;Tesla&quot;</span><span class="p">,</span> <span class="s">&quot;Model 3&quot;</span><span class="p">);</span>
+        <span class="n">Vehicle</span> <span class="n">trek</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bike</span><span class="p">(</span><span class="s">&quot;White&quot;</span><span class="p">,</span> <span class="s">&quot;Mountain Bike&quot;</span><span class="p">);</span>
+        <span class="n">Vehicle</span> <span class="n">boat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vehicle</span><span class="p">(</span><span class="s">&quot;Boat&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        
+        <span class="c1">// Add to a Vehicle array</span>
+        <span class="n">Vehicle</span><span class="o">[]</span> <span class="n">transportation</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vehicle</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">transportation</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">tesla</span><span class="p">;</span>
+        <span class="n">transportation</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">trek</span><span class="p">;</span>
+        <span class="n">transportation</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">boat</span><span class="p">;</span>
+        
+        <span class="c1">// Call the getName method for each</span>
+        <span class="c1">// This will compile since getName is in the Vehicle class</span>
+        <span class="c1">// Each object will use it&#39;s own method.</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">transportation</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="n">transportation</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span> 
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
