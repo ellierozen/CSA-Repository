@@ -1,15 +1,15 @@
-$high-emph: #464ac9;
-$med-emph: #464ac9;
-$low-emph: #464ac9;
+$high-emph: #070830;
+$med-emph: #070830;
+$low-emph: #070830;
 $dark-grey : #3C6997;
-$overlay: mix($dark-grey, #464ac9, 95%);
-$overlay-light: mix($dark-grey, #464ac9, 86%);
+$overlay: mix($dark-grey, #070830, 95%);
+$overlay-light: mix($dark-grey, #070830, 86%);
 html, body, input, textarea, select, button {
   color: $high-emph !important;
   background-color: $dark-grey !important;
 }
 a {
-    color: #3C6997 !important;
+    color: #070830 !important;
 }
 a:hover {
     color:$high-emph !important;
