@@ -425,41 +425,41 @@ pre code { font-size: 15px !important; }
 
 .youtube-iframe-wrapper iframe, .youtube-iframe-wrapper object, .youtube-iframe-wrapper embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-html, body, input, textarea, select, button { color: #464ac9 !important; background-color: #3C6997 !important; }
+html, body, input, textarea, select, button { color: #070830 !important; background-color: #3C6997 !important; }
 
-a { color: #3C6997 !important; }
+a { color: #070830 !important; }
 
-a:hover { color: #464ac9 !important; }
+a:hover { color: #070830 !important; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: #464ac9 !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: #070830 !important; }
 
-.site-nav { background-color: #3C6997; border-color: #3d659e; }
+.site-nav { background-color: #3C6997; border-color: #355b89; }
 
-* { scrollbar-color: #3C6997 #3d659e; }
+* { scrollbar-color: #3C6997 #355b89; }
 
-pre, code { border-color: #3d659e; background-color: #3d679a; }
+pre, code { border-color: #355b89; background-color: #396492; }
 
-.page-description { color: #464ac9; }
+.page-description { color: #070830; }
 
-.post-meta { color: #464ac9; }
+.post-meta { color: #070830; }
 
-.post-content p, .post-content li { color: #464ac9; }
+.post-content p, .post-content li { color: #070830; }
 
-.btn { background-color: #3d679a !important; color: #464ac9 !important; border-color: #3d659e !important; }
+.btn { background-color: #396492 !important; color: #070830 !important; border-color: #355b89 !important; }
 
 .btn:hover { background-color: #3C6997 !important; }
 
-table th { background-color: #3d679a; border-color: #3d659e; color: #464ac9; }
+table th { background-color: #396492; border-color: #355b89; color: #070830; }
 
-table td { background-color: #3C6997; border-color: #3d659e; color: #464ac9; }
+table td { background-color: #3C6997; border-color: #355b89; color: #070830; }
 
 .flash { color: #3C6997 !important; filter: brightness(80%); }
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: #3d679a; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #396492; border: none !important; }
 
-li .post-meta-description { color: #464ac9 !important; }
+li .post-meta-description { color: #070830 !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
