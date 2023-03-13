@@ -1,9 +1,9 @@
-$high-emph: #6f74ff;
-$med-emph: #6f74ff;
-$low-emph: #6f74ff;
-$dark-grey : #11001B;
-$overlay: mix($dark-grey, #6f74ff, 95%);
-$overlay-light: mix($dark-grey, #6f74ff, 86%);
+$high-emph: #464ac9;
+$med-emph: #464ac9;
+$low-emph: #464ac9;
+$dark-grey : #3C6997;
+$overlay: mix($dark-grey, #464ac9, 95%);
+$overlay-light: mix($dark-grey, #464ac9, 86%);
 html, body, input, textarea, select, button {
   color: $high-emph !important;
   background-color: $dark-grey !important;
