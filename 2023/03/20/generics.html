@@ -208,24 +208,22 @@ window.onload = wrap_img;
 	<span class="c1">// Class data</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span> <span class="n">FRQ</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span> <span class="p">}</span>
-	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">problem</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">,}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">,</span> <span class="n">passRate</span><span class="p">,}</span>
 
 	<span class="c1">// Instance data</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">problem</span><span class="p">;</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">difficulty</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">passRate</span><span class="p">;</span>
 
 	<span class="cm">/* constructor</span>
 <span class="cm">	 *</span>
 <span class="cm">	 */</span>
-	<span class="kd">public</span> <span class="nf">FRQ</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="kt">int</span> <span class="n">problem</span><span class="p">,</span> <span class="n">String</span> <span class="n">subject</span><span class="p">,</span> <span class="n">String</span> <span class="n">difficulty</span><span class="p">)</span>
+	<span class="kd">public</span> <span class="nf">FRQ</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="n">String</span> <span class="n">difficulty</span><span class="p">,</span> <span class="kt">double</span> <span class="n">passRate</span><span class="p">)</span>
 	<span class="p">{</span>
 		<span class="kd">super</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">&quot;FRQ&quot;</span><span class="p">);</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">problem</span> <span class="o">=</span> <span class="n">problem</span><span class="p">;</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subject</span><span class="p">;</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">difficulty</span> <span class="o">=</span> <span class="n">difficulty</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">passRate</span> <span class="o">=</span> <span class="n">passRate</span><span class="p">;</span> 
 	<span class="p">}</span>
 
 	<span class="cm">/* &#39;Generics&#39; requires getKey to help enforce KeyTypes usage */</span>
@@ -242,14 +240,12 @@ window.onload = wrap_img;
 		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">year</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
 			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="p">;</span>
 			<span class="c1">// output = output.substring(output.length() - 2);</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">problem</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">problem</span><span class="p">;</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">subject</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">subject</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">difficulty</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
 			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">difficulty</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">passRate</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">passRate</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">problem</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">subject</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">difficulty</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">difficulty</span> <span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">passRate</span><span class="p">;</span>
 		<span class="p">}</span>
 		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
 		
@@ -258,10 +254,10 @@ window.onload = wrap_img;
 	<span class="c1">// Test data initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">FRQ</span><span class="o">[]</span> <span class="nf">FRQs</span><span class="p">()</span> <span class="p">{</span>
 		<span class="k">return</span> <span class="k">new</span> <span class="n">FRQ</span><span class="o">[]</span><span class="p">{</span>
-				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2009</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Control Structures&quot;</span><span class="p">,</span> <span class="s">&quot;hard&quot;</span><span class="p">),</span>
-				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Arrays&quot;</span><span class="p">,</span> <span class="s">&quot;medium&quot;</span><span class="p">),</span>
-				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&quot;2D Arrays&quot;</span><span class="p">,</span> <span class="s">&quot;Easy&quot;</span><span class="p">),</span>
-				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;Writing Classes&quot;</span><span class="p">,</span> <span class="s">&quot;Hard&quot;</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s">&quot;medium&quot;</span><span class="p">,</span> <span class="mf">63.5</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="s">&quot;easy/medium&quot;</span><span class="p">,</span> <span class="mf">60.8</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="s">&quot;medium&quot;</span><span class="p">,</span>  <span class="mf">64.4</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">FRQ</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="s">&quot;easy&quot;</span><span class="p">,</span> <span class="mi">70</span><span class="p">),</span>
 
 		<span class="p">};</span>
 	<span class="p">}</span>
@@ -297,18 +293,18 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$13B$FRQ; 4
+<pre>class [LREPL.$JShell$13F$FRQ; 4
 Generic: FRQ listed by title
-FRQ: 2009, 1, Control Structures, hard
-FRQ: 2012, 1, Arrays, medium
-FRQ: 2014, 4, 2D Arrays, Easy
-FRQ: 2019, 3, Writing Classes, Hard
+FRQ: 2012, medium, 63.5
+FRQ: 2014, easy/medium, 60.8
+FRQ: 2016, medium, 64.4
+FRQ: 2019, easy, 70.0
 
-class [LREPL.$JShell$13B$FRQ; 4
+class [LREPL.$JShell$13F$FRQ; 4
 Generic: FRQ listed by year
-2009
 2012
 2014
+2016
 2019
 
 </pre>
