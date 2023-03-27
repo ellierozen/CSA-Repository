@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Challenge 4 Build a Stack and use it to reverse the order of a Queue. The Queue is a LIFO Data Structure, the Stack is a FIFO data structure, so code is similar but most everything is reversed | fastpages</title>
+<title>Challenge 4 Build a Stack and use it to reverse the order of a Queue | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Challenge 4 Build a Stack and use it to reverse the order of a Queue. The Queue is a LIFO Data Structure, the Stack is a FIFO data structure, so code is similar but most everything is reversed" />
+<meta property="og:title" content="Challenge 4 Build a Stack and use it to reverse the order of a Queue" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-26T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Challenge 4 Build a Stack and use it to reverse the order of a Queue. The Queue is a LIFO Data Structure, the Stack is a FIFO data structure, so code is similar but most everything is reversed" />
+<meta property="twitter:title" content="Challenge 4 Build a Stack and use it to reverse the order of a Queue" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Challenge 4 Build a Stack and use it to reverse the order of a Queue. The Queue is a LIFO Data Structure, the Stack is a FIFO data structure, so code is similar but most everything is reversed","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2023/03/26/challenge4.html"},"url":"https://ellierozen.github.io/CSA-Repository/2023/03/26/challenge4.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Challenge 4 Build a Stack and use it to reverse the order of a Queue","mainEntityOfPage":{"@type":"WebPage","@id":"https://ellierozen.github.io/CSA-Repository/2023/03/26/challenge4.html"},"url":"https://ellierozen.github.io/CSA-Repository/2023/03/26/challenge4.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSA-Repository/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ellierozen.github.io/CSA-Repository/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSA-Repository/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Challenge 4 Build a Stack and use it to reverse the order of a Queue. The Queue is a LIFO Data Structure, the Stack is a FIFO data structure, so code is similar but most everything is reversed</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Challenge 4 Build a Stack and use it to reverse the order of a Queue</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
         Mar 26, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      1 min read
     
 </span></p>
 
@@ -125,28 +125,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="small-notes-to-keep-in-mind">small notes to keep in mind<a class="anchor-link" href="#small-notes-to-keep-in-mind"> </a></h2><ul>
-<li>FIFO, first in first out, type of arrangment, elements inserted at the back and deleted from the front of the queue</li>
-<li>push inserts element at the back of the queue, passed as a parameter </li>
-<li>pop removes an element from the front of the queue and the size of the queue is decreased by one</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="steps">steps<a class="anchor-link" href="#steps"> </a></h3><ul>
-<li>Enter the all elements in queue</li>
-<li>Then pop all elements into stack from queue</li>
-<li>At last, pop all elements from stack and push it into queue</li>
-</ul>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -154,200 +132,47 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-    <span class="c1">//testing</span>
-    <span class="kd">private</span> <span class="n">T</span> <span class="n">data</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">prevNode</span><span class="p">,</span> <span class="n">nextNode</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     *  Constructs a new element</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param  data, data of object</span>
-<span class="cm">     * @param  node, previous node</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">,</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueToStackExample</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Object</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+    <span class="n">QueueChange</span> <span class="n">qNumbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueChange</span><span class="p">(</span><span class="s">&quot;Numbers&quot;</span><span class="p">);</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     *  Clone an object,</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param  node  object to clone</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">data</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">prevNode</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">nextNode</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Setter for T data in DoubleLinkedNode object</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param  data, update data of object</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Returns T data for this element</span>
-<span class="cm">     *</span>
-<span class="cm">     * @return  data associated with object</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getData</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">data</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Setter for prevNode in DoubleLinkedNode object</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param node, prevNode to current Object</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPrevNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Setter for nextNode in DoubleLinkedNode object</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param node, nextNode to current Object</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNextNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
-    <span class="p">}</span>
-
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Returns reference to previous object in list</span>
-<span class="cm">     *</span>
-<span class="cm">     * @return  the previous object in the list</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getPrevious</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *  Returns reference to next object in list</span>
-<span class="cm">     *</span>
-<span class="cm">     * @return  the next object in the list</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getNext</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span><span class="p">;</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-
-    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">lifo</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-
-    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">upper</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-
-    <span class="c1">// constructor initiates null LinkedList&lt;T&gt; object + set size to 0</span>
-    <span class="kd">public</span> <span class="nf">Stack</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">upper</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// push method for a new element to the upper value</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">lifo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">lifo</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="c1">// peek method, return upper</span>
-    <span class="kd">public</span> <span class="n">T</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">lifo</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="k">else</span>
-            <span class="k">return</span> <span class="n">lifo</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="c1">// pop method, return upper and remove </span>
-    <span class="kd">public</span> <span class="n">T</span> <span class="nf">pop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>  <span class="c1">// empty condition</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lifo</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">lifo</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
-            <span class="n">lifo</span> <span class="o">=</span> <span class="n">lifo</span><span class="p">.</span><span class="na">getPrevious</span><span class="p">();</span>  <span class="c1">// stack is overwritten with next item</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">o</span> <span class="p">:</span> <span class="n">numbers</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">data</span><span class="p">;</span>    <span class="c1">// pop always returns data of element popped</span>
+
+    <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack Initial: &quot;</span> <span class="o">+</span> <span class="n">stack</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Queue Initial: &quot;</span><span class="p">);</span>
+    <span class="n">qNumbers</span><span class="p">.</span><span class="na">printIntQueue</span><span class="p">();</span>
+
+    <span class="c1">// Add integers 1 through 5 to the stack</span>
+
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">qNumbers</span><span class="p">.</span><span class="na">getCount</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
     <span class="p">}</span>
 
-    <span class="c1">// get size method</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack Full: &quot;</span> <span class="o">+</span> <span class="n">stack</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Queue when Stacked: &quot;</span><span class="p">);</span>
+    <span class="n">qNumbers</span><span class="p">.</span><span class="na">printIntQueue</span><span class="p">();</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
     <span class="p">}</span>
-
-    <span class="c1">// isEmpty method, compare size to 0</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// toString method, from top to bottom</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">StringBuilder</span> <span class="n">stackToString</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span>
-
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span> <span class="o">=</span> <span class="n">lifo</span><span class="p">;</span>  				<span class="c1">// start from the back</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">node</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">stackToString</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">getData</span><span class="p">());</span> 	<span class="c1">// append the database to output string</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="na">getPrevious</span><span class="p">();</span>    		<span class="c1">// go to previous node</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">node</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
-                <span class="n">stackToString</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
-        <span class="p">}</span>										<span class="c1">// loop &#39;till you reach the beginning</span>
-        <span class="n">stackToString</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">stackToString</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
-    <span class="p">}</span>
-
     
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Reverse</span> <span class="p">{</span>
-     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// test stack with Integer wrapper class</span>
-        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stacks</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
-        <span class="n">stacks</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">stacks</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-        <span class="n">stacks</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-        <span class="n">stacks</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-        <span class="n">stacks</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stacks</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-
-    
-    
-
-    
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack Final: &quot;</span> <span class="o">+</span> <span class="n">stack</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Queue Final: &quot;</span><span class="p">);</span>
+    <span class="n">qNumbers</span><span class="p">.</span><span class="na">printIntQueue</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">Reverse</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">QueueToStackExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[5, 4, 3, 2, 1]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
