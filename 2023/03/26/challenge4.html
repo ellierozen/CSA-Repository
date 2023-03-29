@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -134,6 +134,8 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
 
+
+
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueToStackExample</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Object</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
@@ -173,6 +175,95 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">Incomplete input:</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">/**</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold"> * Queue Manager</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold"> * 1. &#34;has a&#34; Queue</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold"> * 2. support management of Queue tasks (aka: titling, adding a list, printing)</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold"> */</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">class QueueManager&lt;T&gt; {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // queue data</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    private final String name; // name of queue</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    private int count = 0; // number of objects in queue</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public final Queue&lt;T&gt; queue = new Queue&lt;&gt;(); // queue object</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    /**</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     *  Queue constructor</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     *  Title with empty queue</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     */</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public QueueManager(String name) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        this.name = name;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    /**</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     *  Queue constructor</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     *  Title with series of Arrays of Objects</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     */</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public QueueManager(String name, T[]... seriesOfObjects) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        this.name = name;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        this.addList(seriesOfObjects);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    /**</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     * Add a list of objects to queue</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     */</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public void addList(T[]... seriesOfObjects) {  //accepts multiple generic T lists</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (T[] objects: seriesOfObjects)</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            for (T data : objects) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                this.queue.add(data);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                this.count++;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class QueueToStackExample {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public static void main(String[] args) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    Object[] numbers = new Integer[] { 1, 2, 3, 4, 5};</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    QueueChange qNumbers = new QueueChange(&#34;Numbers&#34;);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (Object o : numbers) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">          qNumbers.add(o);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    Stack&lt;Object&gt; stack = new Stack&lt;&gt;();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println(&#34;Stack Initial: &#34; + stack);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.print(&#34;Queue Initial: &#34;);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    qNumbers.printIntQueue();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // Add integers 1 through 5 to the stack</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    int count = qNumbers.getCount();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    for (int i = 0; i &lt; count; i++) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">      stack.push(qNumbers.delete());</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println(&#34;Stack Full: &#34; + stack);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.print(&#34;Queue when Stacked: &#34;);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    qNumbers.printIntQueue();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    for (int i = 0; i &lt; count; i++) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">      qNumbers.add(stack.pop());</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println(&#34;Stack Final: &#34; + stack);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.print(&#34;Queue Final: &#34;);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    qNumbers.printIntQueue();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">QueueToStackExample.main(null);</span></pre>
+</div>
+</div>
+
 </div>
 </div>
 
