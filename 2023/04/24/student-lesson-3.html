@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
@@ -283,87 +283,6 @@ country: Argentina Size: 2780400
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Country</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">long</span> <span class="n">population</span><span class="p">;</span>
-
-    <span class="c1">// constructor</span>
-    <span class="kd">public</span> <span class="nf">Country</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">long</span> <span class="n">population</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">population</span> <span class="o">=</span> <span class="n">population</span><span class="p">;</span>
-    <span class="p">}</span>
-
-  
-
-    <span class="c1">// getPop method to be able to compare two countri</span>
-
-    <span class="c1">// compare country population sizes</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareCountry</span><span class="p">(</span><span class="n">Country</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="n">Country</span><span class="p">.</span><span class="na">stock</span><span class="p">){</span>
-            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">stock</span> <span class="o">&gt;</span> <span class="n">car</span><span class="p">.</span><span class="na">stock</span><span class="p">){</span>
-            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span><span class="p">{</span>
-            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">// toString method for printing</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">&quot;country: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">countr</span> <span class="o">+</span> <span class="s">&quot;   | Population: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">population</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">string</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SelectionSort</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Country</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">min_idx</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="c1">// use compare country, only set min_idx if -1 (smaller pop)</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">.</span><span class="na">compareCountry</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="n">min_idx</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="c1">// assign temp country to swap</span>
-            <span class="n">Country</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">min_idx</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Country</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="k">new</span> <span class="n">Country</span><span class="p">(</span><span class="s">&quot;United States&quot;</span><span class="p">,</span> <span class="mi">331900000</span><span class="p">),</span>
-            <span class="k">new</span> <span class="n">Country</span><span class="p">(</span><span class="s">&quot;Bahrain&quot;</span><span class="p">,</span> <span class="mi">1463000</span><span class="p">),</span>
-            <span class="k">new</span> <span class="n">Country</span><span class="p">(</span><span class="s">&quot;Monaco&quot;</span><span class="p">,</span> <span class="mi">36686</span><span class="p">),</span>
-            <span class="k">new</span> <span class="n">Country</span><span class="p">(</span><span class="s">&quot;China&quot;</span><span class="p">,</span> <span class="mi">1412000000</span><span class="p">),</span>
-            <span class="k">new</span> <span class="n">Country</span><span class="p">(</span><span class="s">&quot;Netherlands&quot;</span><span class="p">,</span> <span class="mi">17530000</span><span class="p">)</span>
-        <span class="p">};</span>
-        <span class="n">SelectionSort</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">SelectionSort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
